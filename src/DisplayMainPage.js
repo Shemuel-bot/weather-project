@@ -1,21 +1,46 @@
-let value = 'london';
-const userInput = document.createElement('input');
-const submit = document.createElement('button');
+function Display() {
+  const form = document.createElement("form");
+  const fieldSet = document.createElement("fieldset");
+  const inputLabel = document.createElement("label");
+  const userInput = document.createElement("input");
+  const submit = document.createElement("button");
+  const foreCastDiv = document.createElement("div");
+  const foreCastHeader = document.createElement("h2");
+  const celsiusTemp = document.createElement("p");
+  const fahrenheitTemp = document.createElement("p");
+  const windSpeedKm = document.createElement("p");
+  const windSpeedMi = document.createElement("p");
+  const humididty = document.createElement("p");
 
-document.body.appendChild(userInput);
-document.body.appendChild(submit);
+  submit.textContent = "Choose";
 
-submit.textContent='Set Location!';
+  userInput.id = "location";
+  inputLabel.for = "location";
+  inputLabel.textContent='Choose a location';
 
-async function CallApi(){
-    const response = await fetch(`https://api.weatherapi.com/v1/current.json?key=3e04850aa3124160880174442240303&q=${value}`, {mode:'cors'});
-    console.log(response.json());
-    }
-    
-    CallApi();
-    
-    submit.onclick = () => {
-        value = userInput.value
-        CallApi();
-    }
-    
+  foreCastDiv.id = "forecast";
+  foreCastHeader.textContent = `Today's forecast`;
+
+  celsiusTemp.textContent = `Celsius: `;
+  fahrenheitTemp.textContent = `Fahrenheit: `;
+  windSpeedKm.textContent = `Wind Speed: km`;
+  windSpeedMi.textContent = `Wind Speed: mi`;
+  humididty.textContent = `Humidity:`;
+
+  fieldSet.appendChild(inputLabel);
+  fieldSet.appendChild(userInput);
+
+  form.appendChild(fieldSet);
+  form.appendChild(submit);  
+
+  foreCastDiv.appendChild(foreCastHeader);
+  foreCastDiv.appendChild(celsiusTemp);
+  foreCastDiv.appendChild(fahrenheitTemp);
+  foreCastDiv.appendChild(windSpeedKm);
+  foreCastDiv.appendChild(windSpeedMi);
+  foreCastDiv.appendChild(humididty);
+
+  document.body.appendChild(form);
+  document.body.appendChild(foreCastDiv);
+}
+export default Display;
