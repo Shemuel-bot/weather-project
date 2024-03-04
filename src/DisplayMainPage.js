@@ -13,10 +13,11 @@ function Display() {
   const humididty = document.createElement("p");
 
   submit.textContent = "Choose";
+  submit.type = "button";
 
   userInput.id = "location";
   inputLabel.for = "location";
-  inputLabel.textContent='Choose a location';
+  inputLabel.textContent = "Choose a location";
 
   foreCastDiv.id = "forecast";
   foreCastHeader.textContent = `Today's forecast`;
@@ -31,7 +32,7 @@ function Display() {
   fieldSet.appendChild(userInput);
 
   form.appendChild(fieldSet);
-  form.appendChild(submit);  
+  form.appendChild(submit);
 
   foreCastDiv.appendChild(foreCastHeader);
   foreCastDiv.appendChild(celsiusTemp);
