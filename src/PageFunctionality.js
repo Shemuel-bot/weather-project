@@ -1,3 +1,5 @@
+import DisplayValues from "./DisplayWeather";
+
 let value = "london";
 
 async function CallApi() {
@@ -5,7 +7,8 @@ async function CallApi() {
     `https://api.weatherapi.com/v1/current.json?key=3e04850aa3124160880174442240303&q=${value}`,
     { mode: "cors" },
   );
-  console.log(response.json());
+  const feedBack = await response.json();
+  DisplayValues(feedBack);
 }
 
 function Change() {

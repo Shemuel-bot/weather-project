@@ -22,11 +22,17 @@ function Display() {
   foreCastDiv.id = "forecast";
   foreCastHeader.textContent = `Today's forecast`;
 
-  celsiusTemp.textContent = `Celsius: `;
-  fahrenheitTemp.textContent = `Fahrenheit: `;
-  windSpeedKm.textContent = `Wind Speed: km`;
-  windSpeedMi.textContent = `Wind Speed: mi`;
+  celsiusTemp.textContent = `Celsius:`;
+  fahrenheitTemp.textContent = `Fahrenheit:`;
+  windSpeedKm.textContent = `Wind Speed:`;
+  windSpeedMi.textContent = `Wind Speed:`;
   humididty.textContent = `Humidity:`;
+
+  celsiusTemp.id = `Celsius`;
+  fahrenheitTemp.id = `Fahrenheit`;
+  windSpeedKm.id = `Wind SpeedKm`;
+  windSpeedMi.id = `Wind SpeedMi`;
+  humididty.id = `Humidity`;
 
   fieldSet.appendChild(inputLabel);
   fieldSet.appendChild(userInput);
