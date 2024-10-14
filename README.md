@@ -1,9 +1,9 @@
-# Admin-dashboard
+# Weather app
 
 https://shemuel-bot.github.io/weather-project/
 ## About
 <div align="center">
-  <img src="images/screen-shot.png">
+  <img src="src/screen-shot.png">
 </div>.
 
 ### description
